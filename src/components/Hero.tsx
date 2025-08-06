@@ -7,97 +7,63 @@ const Hero = () => {
 
   return (
     <>
-      <section className="pt-16 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-50 text-blue-700 border border-blue-100">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                AI-Powered B2B Outreach
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                From First Contact to 
-                <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"> Results</span>
-                —We Deliver.
-              </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                We help B2B teams uncover verified contacts and book high-intent sales meetings through AI-powered multithreaded outreach—designed for scale, built for conversions.
-              </p>
+      <section className="pt-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-orange-500/10 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-400/5 rounded-full blur-lg"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+          <div className="text-center space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm bg-blue-500/10 text-blue-300 border border-blue-500/20">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              AI-Powered B2B Outreach Platform
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* Main Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl mx-auto">
+              Leads N Links :
+              <span className="block text-blue-400 mt-2">
+                where conversations Turns Into clients.
+              </span>
+            </h1>
+            
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+              Helping large enterprise and fast-growth scale-ups accelerate their transition to a modern B2B outreach approach oriented around business outcomes that matter.
+            </p>
+            
+            {/* CTA Button */}
+            <div className="pt-8">
               <button 
                 onClick={() => setIsContactFormOpen(true)}
-                className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-10 py-5 rounded-xl text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 inline-flex items-center group"
               >
-                Book a Demo
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-                Watch Video
+                Talk to an Expert Today
+                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
             
-            <div className="flex items-center space-x-8 text-sm text-gray-500">
+            {/* Trust indicators */}
+            <div className="pt-12 flex flex-wrap justify-center items-center gap-8 text-sm text-gray-400">
               <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                Free consultation
+                <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                Free Strategy Session
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                Custom solutions
+                <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                Custom Implementation
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-2 text-green-500" />
-                Proven results
+                <CheckCircle className="w-4 h-4 mr-2 text-blue-400" />
+                Guaranteed Results
               </div>
             </div>
-          </div>
-          
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-gray-900">Live Campaign Results</h3>
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">2,847</div>
-                    <div className="text-sm text-gray-600">Contacts Found</div>
-                  </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">89%</div>
-                    <div className="text-sm text-gray-600">Verified Rate</div>
-                  </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">156</div>
-                    <div className="text-sm text-gray-600">Meetings Booked</div>
-                  </div>
-                  <div className="bg-orange-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">23%</div>
-                    <div className="text-sm text-gray-600">Response Rate</div>
-                  </div>
-                </div>
-                
-                <div className="pt-4 border-t border-gray-100">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">Campaign ROI</span>
-                    <span className="text-green-600 font-semibold">+340%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
           </div>
         </div>
-      </div>
       </section>
       
       <ContactForm 
