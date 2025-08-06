@@ -91,54 +91,86 @@ const HowItWorks = () => {
           </div>
           
           <div className="grid lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div 
-                key={index} 
-                ref={el => stepRefs.current[index] = el}
-                data-step={index}
-                className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-700 group transform ${
-                  visibleSteps.includes(index) 
-                    ? 'opacity-100 translate-y-0 scale-100' 
-                    : 'opacity-0 translate-y-8 scale-95'
-                }`}
-                style={{
-                  transitionDelay: `${visibleSteps.includes(index) ? index * 200 : 0}ms`
-                }}
-              >
-                {/* Step number */}
-                <div className={`absolute -top-4 left-8 w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-500 ${
-                  visibleSteps.includes(index)
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-400 scale-100'
-                    : 'bg-gray-300 scale-90'
-                }`}>
-                  {step.step}
-                </div>
-                
-                <div className="space-y-4">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 ${
+            {steps.map((step, index) => {
+              const isEven = index % 2 === 0;
+              const isDark = !isEven;
+              
+              return (
+                <div 
+                  key={index} 
+                  ref={el => stepRefs.current[index] = el}
+                  data-step={index}
+                  className={`relative rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 group transform overflow-hidden ${
+                    isDark 
+                      ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800' 
+                      : 'bg-gradient-to-br from-blue-50 via-white to-blue-50'
+                  } ${
+                    visibleSteps.includes(index) 
+                      ? 'opacity-100 translate-y-0 scale-100' 
+                      : 'opacity-0 translate-y-8 scale-95'
+                  }`}
+                  style={{
+                    transitionDelay: `${visibleSteps.includes(index) ? index * 200 : 0}ms`
+                  }}
+                >
+                  {/* Decorative background elements */}
+                  <div className={`absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 transform translate-x-8 -translate-y-8 ${
+                    isDark ? 'bg-white' : 'bg-blue-400'
+                  }`}></div>
+                  <div className={`absolute bottom-0 left-0 w-24 h-24 rounded-full opacity-5 transform -translate-x-4 translate-y-4 ${
+                    isDark ? 'bg-white' : 'bg-blue-300'
+                  }`}></div>
+                  
+                  {/* Step number */}
+                  <div className={`absolute -top-4 left-8 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-500 shadow-lg ${
                     visibleSteps.includes(index)
-                      ? 'bg-gradient-to-r from-blue-100 to-blue-200'
-                      : 'bg-gray-100'
+                      ? isDark 
+                        ? 'bg-white text-blue-600 scale-100'
+                        : 'bg-gradient-to-r from-blue-600 to-blue-400 text-white scale-100'
+                      : 'bg-gray-300 text-gray-600 scale-90'
                   }`}>
-                    <step.icon className={`w-6 h-6 transition-colors duration-500 ${
-                      visibleSteps.includes(index) ? 'text-blue-600' : 'text-gray-400'
-                    }`} />
+                    {step.step}
                   </div>
                   
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-                    <p className="text-gray-600 leading-relaxed mb-4">{step.description}</p>
-                    <div className={`text-sm font-medium px-3 py-1 rounded-full inline-block transition-all duration-500 ${
+                  <div className="relative z-10 space-y-6">
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg ${
                       visibleSteps.includes(index)
-                        ? 'text-green-600 bg-green-50 opacity-100 translate-x-0'
-                        : 'text-gray-400 bg-gray-50 opacity-70 translate-x-2'
+                        ? isDark
+                          ? 'bg-white/20 backdrop-blur-sm'
+                          : 'bg-gradient-to-br from-blue-100 to-blue-200'
+                        : 'bg-gray-100'
                     }`}>
-                      {step.highlight}
+                      <step.icon className={`w-8 h-8 transition-colors duration-500 ${
+                        visibleSteps.includes(index) 
+                          ? isDark ? 'text-white' : 'text-blue-600' 
+                          : 'text-gray-400'
+                      }`} />
+                    </div>
+                    
+                    <div>
+                      <h3 className={`text-2xl font-bold mb-3 ${
+                        isDark ? 'text-white' : 'text-gray-900'
+                      }`}>{step.title}</h3>
+                      <p className={`leading-relaxed mb-6 text-base ${
+                        isDark ? 'text-blue-100' : 'text-gray-600'
+                      }`}>{step.description}</p>
+                      <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold transition-all duration-500 ${
+                        visibleSteps.includes(index)
+                          ? isDark
+                            ? 'text-blue-600 bg-white/90 opacity-100 translate-x-0 shadow-md'
+                            : 'text-green-600 bg-green-50 opacity-100 translate-x-0 border border-green-200'
+                          : 'text-gray-400 bg-gray-50 opacity-70 translate-x-2'
+                      }`}>
+                        <div className={`w-2 h-2 rounded-full mr-2 ${
+                          isDark ? 'bg-blue-600' : 'bg-green-500'
+                        }`}></div>
+                        {step.highlight}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

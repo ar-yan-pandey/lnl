@@ -45,130 +45,59 @@ const VideoSection = () => {
         </div>
         
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white">
-            Resources &
-            <span className="bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent"> Industry Experts</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+            Simple, Transparent Pricing
+            <span className="block text-green-600 text-2xl mt-2">Get First 100 for Just ₹5 Each!</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Access exclusive content, masterclasses, and insights from top B2B sales professionals.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            No monthly fees, no hidden costs. Pay only for verified phone numbers you get.
           </p>
         </div>
-        
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center">
-                  <Video className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">Weekly Masterclasses</h3>
-                  <p className="text-gray-400">Live sessions every Tuesday at 2 PM EST</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition-colors cursor-pointer group">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-white group-hover:text-blue-400 transition-colors">AI-Powered Personalization at Scale</h4>
-                      <p className="text-sm text-gray-400">Jan 23, 2025 • 45 min</p>
-                    </div>
-                    <Play className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-                
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition-colors cursor-pointer group">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-white group-hover:text-blue-400 transition-colors">Multi-Threading: The Complete Guide</h4>
-                      <p className="text-sm text-gray-400">Jan 16, 2025 • 52 min</p>
-                    </div>
-                    <Play className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-                
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition-colors cursor-pointer group">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-white group-hover:text-blue-400 transition-colors">From 2% to 23% Response Rates</h4>
-                      <p className="text-sm text-gray-400">Jan 9, 2025 • 38 min</p>
-                    </div>
-                    <Play className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-              </div>
-              
-              <button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-blue-400 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-200">
-                View All Masterclasses
-              </button>
-            </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* First 100 Contacts */}
+          <div className="bg-white border-2 border-green-200 rounded-2xl shadow-md p-8 flex flex-col items-center relative">
+            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">80% OFF</span>
+            <div className="mb-4 text-green-600 text-6xl font-extrabold">₹5</div>
+            <div className="text-gray-800 font-bold text-lg mb-2">First 100 Contacts</div>
+            <div className="text-gray-500 mb-4 text-center">Perfect for testing and small teams</div>
+            <ul className="text-gray-700 space-y-2 text-sm mb-6 text-left">
+              <li>100 verified phone numbers</li>
+              <li>100% credit refund for wrong numbers</li>
+              <li>91% accuracy guarantee</li>
+              <li>Perfect for sales & recruitment</li>
+            </ul>
+            <button className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">Get First 100 for ₹5 – Contact Us</button>
           </div>
-          
-          <div className="space-y-8">
-            <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center">
-                  <Mic className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">The Outreach Podcast</h3>
-                  <p className="text-gray-400">New episodes every Thursday</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition-colors cursor-pointer group">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-white group-hover:text-green-400 transition-colors">#47: Scaling to $10M ARR with Outbound</h4>
-                      <p className="text-sm text-gray-400">With Sarah Chen, VP Sales at TechFlow</p>
-                    </div>
-                    <Play className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-                
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition-colors cursor-pointer group">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-white group-hover:text-green-400 transition-colors">#46: The Psychology of B2B Buying</h4>
-                      <p className="text-sm text-gray-400">With Dr. Marcus Reid, Behavioral Economist</p>
-                    </div>
-                    <Play className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-                
-                <div className="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 transition-colors cursor-pointer group">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-white group-hover:text-green-400 transition-colors">#45: AI Revolution in Sales Development</h4>
-                      <p className="text-sm text-gray-400">With Alex Thompson, CEO of SalesAI</p>
-                    </div>
-                    <Play className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-              </div>
-              
-              <button className="w-full mt-6 bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-200">
-                Listen on All Platforms
-              </button>
-            </div>
-            
-            <div className="bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl p-8 text-white">
-              <div className="flex items-center space-x-4 mb-4">
-                <Users className="w-8 h-8" />
-                <div>
-                  <h3 className="text-xl font-semibold">Join Our Community</h3>
-                  <p className="text-blue-100">5,000+ B2B sales professionals</p>
-                </div>
-              </div>
-              <p className="text-blue-100 mb-6">
-                Connect with like-minded sales leaders, share strategies, and get exclusive access to templates and tools.
-              </p>
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Join Free Community
-              </button>
-            </div>
+
+          {/* After 100 Contacts */}
+          <div className="bg-white border-2 border-blue-200 rounded-2xl shadow-lg p-8 flex flex-col items-center relative scale-105 z-10">
+            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">Most Popular</span>
+            <div className="mb-4 text-blue-600 text-6xl font-extrabold">₹25</div>
+            <div className="text-gray-800 font-bold text-lg mb-2">After 100 Contacts</div>
+            <div className="text-gray-500 mb-4 text-center">For growing teams and professionals</div>
+            <ul className="text-gray-700 space-y-2 text-sm mb-6 text-left">
+              <li>Unlimited contacts</li>
+              <li>100% credit refund for wrong numbers</li>
+              <li>91% accuracy guarantee</li>
+              <li>Priority support</li>
+            </ul>
+            <button className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">Get Started</button>
+          </div>
+
+          {/* 500+ Contacts/Month */}
+          <div className="bg-white border-2 border-purple-200 rounded-2xl shadow-md p-8 flex flex-col items-center relative">
+            <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">Enterprise</span>
+            <div className="mb-4 text-purple-600 text-3xl font-extrabold">Custom</div>
+            <div className="text-gray-800 font-bold text-lg mb-2">500+ Contacts/Month</div>
+            <div className="text-gray-500 mb-4 text-center">For large teams and enterprises</div>
+            <ul className="text-gray-700 space-y-2 text-sm mb-6 text-left">
+              <li>Bulk pricing (up to 40% off)</li>
+              <li>Dedicated account manager</li>
+              <li>API access</li>
+              <li>24/7 priority support</li>
+            </ul>
+            <button className="w-full bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition">Contact Sales</button>
           </div>
         </div>
       </div>

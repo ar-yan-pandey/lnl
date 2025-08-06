@@ -55,24 +55,61 @@ const Features = () => {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="group bg-gray-50 hover:bg-white hover:shadow-xl border border-gray-100 rounded-2xl p-8 transition-all duration-300">
-              <div className="space-y-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
+          {features.map((feature, index) => {
+            const isEven = index % 2 === 0;
+            const isDark = !isEven;
+            
+            return (
+              <div 
+                key={index} 
+                className={`group rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden relative ${
+                  isDark 
+                    ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800' 
+                    : 'bg-gradient-to-br from-blue-50 via-white to-blue-50'
+                }`}
+              >
+                {/* Decorative background elements */}
+                <div className={`absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 transform translate-x-8 -translate-y-8 ${
+                  isDark ? 'bg-white' : 'bg-blue-400'
+                }`}></div>
+                <div className={`absolute bottom-0 left-0 w-24 h-24 rounded-full opacity-5 transform -translate-x-4 translate-y-4 ${
+                  isDark ? 'bg-white' : 'bg-blue-300'
+                }`}></div>
                 
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                </div>
-                
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="text-sm font-medium text-blue-600">{feature.stats}</div>
+                <div className="relative z-10 space-y-6">
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg ${
+                    isDark
+                      ? 'bg-white/20 backdrop-blur-sm'
+                      : 'bg-gradient-to-br from-blue-100 to-blue-200'
+                  }`}>
+                    <feature.icon className={`w-8 h-8 transition-colors duration-300 ${
+                      isDark ? 'text-white' : 'text-blue-600'
+                    }`} />
+                  </div>
+                  
+                  <div>
+                    <h3 className={`text-2xl font-bold mb-3 ${
+                      isDark ? 'text-white' : 'text-gray-900'
+                    }`}>{feature.title}</h3>
+                    <p className={`leading-relaxed mb-6 text-base ${
+                      isDark ? 'text-blue-100' : 'text-gray-600'
+                    }`}>{feature.description}</p>
+                  </div>
+                  
+                  <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold shadow-md ${
+                    isDark
+                      ? 'text-blue-600 bg-white/90'
+                      : 'text-green-600 bg-green-50 border border-green-200'
+                  }`}>
+                    <div className={`w-2 h-2 rounded-full mr-2 ${
+                      isDark ? 'bg-blue-600' : 'bg-green-500'
+                    }`}></div>
+                    {feature.stats}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

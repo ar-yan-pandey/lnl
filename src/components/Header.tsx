@@ -10,18 +10,19 @@ const Header = () => {
     <>
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center -ml-12">
             <img 
               src="/images/logo-bg-rm.png" 
               alt="Leads N Links Logo" 
-              className="w-40 h-28 object-contain"
+              className="w-40 h-36 object-contain"
             />
           </div>
           
           <nav className="hidden md:flex space-x-8">
             <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
             <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">How It Works</a>
+            <a href="#video" className="text-gray-600 hover:text-gray-900 transition-colors">Plans</a>
             <a href="#video" className="text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
             <a href="#results" className="text-gray-600 hover:text-gray-900 transition-colors">Results</a>
           </nav>
@@ -48,8 +49,8 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <a href="#features" className="text-gray-600">Features</a>
               <a href="#how-it-works" className="text-gray-600">How It Works</a>
+              <a href="#video" className="text-gray-600">Plans</a>
               <a href="#video" className="text-gray-600">Resources</a>
-              <a href="#results" className="text-gray-600">Results</a>
               <div className="pt-4 border-t border-gray-100">
                 <button 
                   onClick={() => setIsContactFormOpen(true)}

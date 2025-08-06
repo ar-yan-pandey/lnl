@@ -31,26 +31,26 @@ const Results = () => {
 
   const testimonials = [
     {
-      name: "Sarah Mitchell",
+      name: "Priya Sharma",
       role: "VP of Sales",
-      company: "TechFlow Solutions",
-      image: "https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      company: "InnoTech India",
+      image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
       quote: "We went from 2% to 23% response rates in just 6 weeks. The AI personalization is incredible.",
       results: "+1,150% response rate increase"
     },
     {
-      name: "Marcus Chen",
+      name: "Rohan Mehra",
       role: "Head of Growth",
-      company: "DataCore Analytics",
-      image: "https://images.pexels.com/photos/3778876/pexels-photo-3778876.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      company: "DataCore Analytics India",
+      image: "https://st.depositphotos.com/1011643/4430/i/950/depositphotos_44309759-stock-photo-young-indian-man-outdoors.jpg",
       quote: "Leads N Links helped us scale from 50 to 500 qualified meetings per month without adding headcount.",
       results: "+900% meeting volume increase"
     },
     {
-      name: "Lisa Rodriguez",
+      name: "Aarti Patel",
       role: "Sales Director",
-      company: "CloudScale Inc",
-      image: "https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      company: "CloudScale Solutions",
+      image: "https://tse3.mm.bing.net/th/id/OIP.Fd9FpzhrFkFZ3wN-uBD3lwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       quote: "The contact verification alone saved us 15 hours per week. Now we focus on selling, not prospecting.",
       results: "15 hours saved weekly"
     }

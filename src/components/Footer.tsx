@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/images/logo-bg-rm.png" 
+                src="/images/logo-white.png" 
                 alt="Leads N Links Logo" 
                 className="w-21 h-21 object-contain"
               />
@@ -32,13 +32,29 @@ const Footer = () => {
           
           
           <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <h3 className="text-white font-semibold mb-4">QUICK LINKS</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Masterclasses</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Podcast</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Templates</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">How it Works</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4">COMPANY</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Free Tools</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Become A Partner</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Legal</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact Sales</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Affiliates</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Sitemap</a></li>
             </ul>
           </div>
           
