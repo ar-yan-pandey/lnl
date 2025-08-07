@@ -67,7 +67,18 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gradient-to-br from-gray-50 to-white" ref={sectionRef}>
+    <section id="how-it-works" className="py-20 bg-gradient-to-br from-gray-50 to-white relative" ref={sectionRef}>
+  {/* Minimal plus pattern background */}
+  <div
+    className="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0"
+    style={{
+      backgroundImage:
+        'url("data:image/svg+xml,%3Csvg width=\'28\' height=\'28\' viewBox=\'0 0 28 28\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'14\' cy=\'14\' r=\'1.5\' fill=\'%239ca3af\' fill-opacity=\'0.7\'/%3E%3C/svg%3E")',
+      backgroundRepeat: 'repeat',
+      backgroundPosition: 'center',
+      backgroundSize: '32px 32px',
+    }}
+  />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
@@ -100,15 +111,13 @@ const HowItWorks = () => {
                   key={index} 
                   ref={el => stepRefs.current[index] = el}
                   data-step={index}
-                  className={`relative rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 group transform overflow-hidden ${
-                    isDark 
-                      ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800' 
-                      : 'bg-gradient-to-br from-blue-50 via-white to-blue-50'
-                  } ${
-                    visibleSteps.includes(index) 
-                      ? 'opacity-100 translate-y-0 scale-100' 
-                      : 'opacity-0 translate-y-8 scale-95'
-                  }`}
+                  className={`relative rounded-3xl p-8 pt-12 shadow-xl transition-all duration-700 group transform overflow-visible
+  ${isDark
+    ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 hover:shadow-[0_0_64px_24px_rgba(59,130,246,0.55)] hover:ring-2 hover:ring-blue-400'
+    : 'bg-gradient-to-br from-blue-50 via-white to-blue-50 hover:shadow-[0_0_48px_16px_rgba(59,130,246,0.18)] hover:ring-2 hover:ring-blue-200'}
+  ${visibleSteps.includes(index) ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95'}
+`}
+
                   style={{
                     transitionDelay: `${visibleSteps.includes(index) ? index * 200 : 0}ms`
                   }}

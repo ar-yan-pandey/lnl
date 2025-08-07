@@ -65,13 +65,10 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-blue-400" />
                 <span>hello@leadsnlinks.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span>+1 (555) 123-4567</span>
-              </div>
+             
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span>San Francisco, CA</span>
+                <span>Pune & Bangalore</span>
               </div>
             </div>
           </div>

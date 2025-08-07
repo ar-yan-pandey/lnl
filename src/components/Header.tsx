@@ -5,26 +5,47 @@ import ContactForm from './ContactForm';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isContactFormOpen, setIsContactFormOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+      <header
+        className={`fixed top-0 w-full z-50 transition-all duration-300
+          ${isScrolled
+            ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100'
+            : 'bg-transparent border-none'}
+        `}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center -ml-12">
-            <img 
-              src="/images/logo-bg-rm.png" 
-              alt="Leads N Links Logo" 
-              className="w-40 h-36 object-contain"
-            />
           </div>
           
-          <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition-colors">How It Works</a>
-            <a href="#video" className="text-gray-600 hover:text-gray-900 transition-colors">Plans</a>
-            <a href="#video" className="text-gray-600 hover:text-gray-900 transition-colors">Resources</a>
-            <a href="#results" className="text-gray-600 hover:text-gray-900 transition-colors">Results</a>
+          <nav className="hidden md:flex items-center gap-x-10 font-bold transition-colors duration-300 text-lg">
+            {["Home", "Features", "How It Works", "Plans", "Resources", "Results"].map((item) => (
+  <a
+    key={item}
+    href={item === "Plans" ? "/revenue-accelerator" : (item === "Home" ? "/#hero" : `/#${item.replace(/ /g, "-").toLowerCase()}`)}
+    className={`transition-colors duration-300 px-2 py-1 rounded-md ${
+      isScrolled ? "text-gray-900 hover:text-blue-600" : "text-white hover:text-blue-200"
+    }`}
+  >
+    {item}
+  </a>
+))}
+            
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -45,23 +66,29 @@ const Header = () => {
         </div>
         
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <nav className="flex flex-col space-y-4">
-              <a href="#features" className="text-gray-600">Features</a>
-              <a href="#how-it-works" className="text-gray-600">How It Works</a>
-              <a href="#video" className="text-gray-600">Plans</a>
-              <a href="#video" className="text-gray-600">Resources</a>
-              <div className="pt-4 border-t border-gray-100">
-                <button 
-                  onClick={() => setIsContactFormOpen(true)}
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-2 rounded-lg"
-                >
-                  Book a Demo
-                </button>
-              </div>
-            </nav>
-          </div>
+          <nav className={`md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center pt-24 gap-y-8 transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            {["Home", "Features", "How It Works", "Plans", "Resources", "Results"].map((item) => (
+  <a
+    key={item}
+    href={item === "Plans" ? "/revenue-accelerator" : (item === "Home" ? "/#hero" : `/#${item.replace(/ /g, "-").toLowerCase()}`)}
+    className="text-2xl text-gray-900 font-semibold hover:text-blue-600 transition-colors"
+    onClick={() => setIsMenuOpen(false)}
+  >
+    {item}
+  </a>
+))}
+            <button
+              onClick={() => {
+                setIsContactFormOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-8 py-3 rounded-lg mt-6 text-xl font-bold shadow-lg hover:shadow-xl transition-all duration-200"
+            >
+              Book a Demo
+            </button>
+          </nav>
         )}
+
       </div>
       </header>
       

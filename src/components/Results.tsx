@@ -57,7 +57,18 @@ const Results = () => {
   ];
 
   return (
-    <section id="results" className="py-20 bg-white">
+    <section id="results" className="py-20 bg-white relative">
+  {/* Minimal plus pattern background */}
+  <div
+    className="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0"
+    style={{
+      backgroundImage:
+        'url("data:image/svg+xml,%3Csvg width=\'28\' height=\'28\' viewBox=\'0 0 28 28\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'14\' cy=\'14\' r=\'1.5\' fill=\'%239ca3af\' fill-opacity=\'0.7\'/%3E%3C/svg%3E")',
+      backgroundRepeat: 'repeat',
+      backgroundPosition: 'center',
+      backgroundSize: '32px 32px',
+    }}
+  />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
@@ -72,13 +83,13 @@ const Results = () => {
         {/* Stats */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div key={index} className="text-center group transition-all duration-300 hover:shadow-[0_0_48px_16px_rgba(59,130,246,0.25)] hover:ring-2 hover:ring-blue-300 bg-blue-600 rounded-2xl p-8 text-white">
+              <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
-              <div className="text-lg font-semibold text-gray-700 mb-2">{stat.label}</div>
-              <div className="text-sm text-gray-500">{stat.description}</div>
+              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
+              <div className="text-sm text-blue-200">{stat.description}</div>
             </div>
           ))}
         </div>
@@ -86,7 +97,7 @@ const Results = () => {
         {/* Testimonials */}
         <div className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+            <div key={index} className="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-[0_0_48px_16px_rgba(34,197,94,0.20)] hover:ring-2 hover:ring-green-300">
               <div className="flex items-center space-x-4 mb-6">
                 <img 
                   src={testimonial.image} 

@@ -42,7 +42,18 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-20 bg-white relative">
+  {/* Minimal plus pattern background */}
+  <div
+    className="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0"
+    style={{
+      backgroundImage:
+        'url("data:image/svg+xml,%3Csvg width=\'28\' height=\'28\' viewBox=\'0 0 28 28\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'14\' cy=\'14\' r=\'1.5\' fill=\'%239ca3af\' fill-opacity=\'0.7\'/%3E%3C/svg%3E")',
+      backgroundRepeat: 'repeat',
+      backgroundPosition: 'center',
+      backgroundSize: '32px 32px',
+    }}
+  />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
@@ -62,11 +73,11 @@ const Features = () => {
             return (
               <div 
                 key={index} 
-                className={`group rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden relative ${
-                  isDark 
-                    ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800' 
-                    : 'bg-gradient-to-br from-blue-50 via-white to-blue-50'
-                }`}
+                className={`group rounded-3xl p-8 shadow-xl transition-all duration-500 transform hover:scale-105 overflow-hidden relative
+  ${isDark
+    ? 'bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 hover:shadow-[0_0_64px_24px_rgba(59,130,246,0.55)] hover:ring-2 hover:ring-blue-400'
+    : 'bg-gradient-to-br from-blue-50 via-white to-blue-50 hover:shadow-[0_0_48px_16px_rgba(59,130,246,0.18)] hover:ring-2 hover:ring-blue-200'}
+}`}
               >
                 {/* Decorative background elements */}
                 <div className={`absolute top-0 right-0 w-32 h-32 rounded-full opacity-10 transform translate-x-8 -translate-y-8 ${
