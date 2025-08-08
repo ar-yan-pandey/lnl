@@ -30,7 +30,12 @@ const Header = () => {
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center -ml-12">
+          <div className="flex items-center -ml-12 md:hidden">
+            <img
+              src={isScrolled ? "/images/logo-bg-rm.png" : "/images/logo-white.png"}
+              alt="Logo"
+              className="h-10 w-auto transition-all duration-300"
+            />
           </div>
           
           <nav className="hidden md:flex items-center gap-x-10 transition-colors duration-300 text-lg tracking-wide uppercase">
@@ -60,13 +65,29 @@ const Header = () => {
           <button 
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen 
+              ? <X className={`w-7 h-7 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
+              : <Menu className={`w-7 h-7 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
+            }
           </button>
         </div>
         
         {isMenuOpen && (
           <nav className={`md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center pt-24 gap-y-8 transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <img
+              src={"/images/logo-bg-rm.png"}
+              alt="Logo"
+              className="h-10 w-auto absolute top-8 left-8"
+            />
+            <button
+              className="absolute top-7 right-7 p-2 rounded-full focus:outline-none bg-gray-100 hover:bg-gray-200"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X className="w-7 h-7 text-gray-900" />
+            </button>
             {["Home", "Features", "How It Works", "Plans", "Results"].map((item) => (
   <a
     key={item}

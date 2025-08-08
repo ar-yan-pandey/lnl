@@ -43,7 +43,7 @@ const Results = () => {
       role: "Head of Growth",
       company: "DataCore Analytics India",
       image: "https://st.depositphotos.com/1011643/4430/i/950/depositphotos_44309759-stock-photo-young-indian-man-outdoors.jpg",
-      quote: "Leads N Links helped us scale from 50 to 150 qualified meetings per month without adding headcount.",
+      quote: "Leads N Links helped us scale from 10 to 35 qualified meetings per month without adding headcount.",
       results: "+900% meeting volume increase"
     },
     {
