@@ -35,9 +35,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
 
     try {
       // Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_v6ipe0l';
+      const templateId = 'template_2nne5xw';
+      const publicKey = 'W9f1UWr_u0SJ8Zj1J';
 
       const templateParams = {
         from_name: `${formData.firstName} ${formData.lastName}`,
