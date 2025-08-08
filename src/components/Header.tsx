@@ -42,13 +42,15 @@ const Header = () => {
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center pl-0 md:hidden">
-            <img
-              src={isScrolled ? "/images/logo-bg-rm.png" : "/images/logo-white.png"}
-              alt="Logo"
-              className="h-20 w-auto transition-all duration-300"
-            />
-          </div>
+          {!isScrolled && (
+            <div className="flex items-center pt-20 md:hidden">
+              <img
+                src="/images/logo-white.png"
+                alt="Logo"
+                className="h-40 w-auto transition-all duration-300"
+              />
+            </div>
+          )}
           
           <nav className="hidden md:flex items-center gap-x-10 transition-colors duration-300 text-lg tracking-wide uppercase">
             {[
@@ -103,11 +105,7 @@ const Header = () => {
     {/* Backdrop for overlay */}
     <div className="absolute inset-0 bg-white/95 backdrop-blur-sm" />
     <nav className="relative flex flex-col items-center pt-24 gap-y-8 w-full">
-      <img
-        src={"/images/logo-bg-rm.png"}
-        alt="Logo"
-        className="h-20 w-auto absolute top-6 left-6"
-      />
+      
       <button
         className="absolute top-7 right-7 p-2 rounded-full focus:outline-none bg-gray-100 hover:bg-gray-200"
         onClick={() => setIsMenuOpen(false)}

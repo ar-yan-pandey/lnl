@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       {loading && <LoadingScreen />}
       {!loading && (
         <Router>
@@ -42,7 +42,7 @@ function App() {
           </Routes>
         </Router>
       )}
-    </>
+    </div>
   );
 }
 
