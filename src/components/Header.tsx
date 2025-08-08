@@ -34,7 +34,7 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center gap-x-10 transition-colors duration-300 text-lg tracking-wide uppercase">
-            {["Home", "Features", "How It Works", "Plans", "Resources", "Results"].map((item) => (
+            {["Home", "Features", "How It Works", "Plans", "Results"].map((item) => (
   <a
     key={item}
     href={item === "Plans" ? "/revenue-accelerator" : (item === "Home" ? "/#hero" : `/#${item.replace(/ /g, "-").toLowerCase()}`)}
@@ -67,7 +67,7 @@ const Header = () => {
         
         {isMenuOpen && (
           <nav className={`md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center pt-24 gap-y-8 transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-            {["Home", "Features", "How It Works", "Plans", "Resources", "Results"].map((item) => (
+            {["Home", "Features", "How It Works", "Plans", "Results"].map((item) => (
   <a
     key={item}
     href={item === "Plans" ? "/revenue-accelerator" : (item === "Home" ? "/#hero" : `/#${item.replace(/ /g, "-").toLowerCase()}`)}

@@ -14,6 +14,7 @@ interface Plan {
 interface PlanComparisonModalProps {
   open: boolean;
   onClose: () => void;
+  onOpenContactForm: () => void;
 }
 
 const plans: Plan[] = [
@@ -112,11 +113,14 @@ const PlanComparisonModal: React.FC<PlanComparisonModalProps> = ({ open, onClose
                   ))}
                 </ul>
                 <button
-  className={`w-full font-semibold py-3 rounded-lg transition text-white ${plan.tag === 'LeadLite' ? 'bg-gray-900 hover:bg-gray-800' : `bg-${plan.color}-600 hover:bg-${plan.color}-700`} shadow-lg text-base mt-auto`}
-  onClick={onClose}
->
-  {plan.button}
-</button>
+                  className={`w-full font-semibold py-3 rounded-lg transition text-white ${plan.tag === 'LeadLite' ? 'bg-gray-900 hover:bg-gray-800' : `bg-${plan.color}-600 hover:bg-${plan.color}-700`} shadow-lg text-base mt-auto`}
+                  onClick={() => {
+                    onClose();
+                    onOpenContactForm();
+                  }}
+                >
+                  {plan.button}
+                </button>
               </div>
             ))}
           </div>

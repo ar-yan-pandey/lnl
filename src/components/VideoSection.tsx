@@ -36,7 +36,7 @@ const VideoSection = () => {
         <div className="relative mt-20 mb-16">
   {/* Background image with overlay only for plans section */}
   <img
-    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80"
+    src="https://images.pexels.com/photos/262470/pexels-photo-262470.jpeg"
     alt="Background"
     className="absolute inset-0 w-full h-full object-cover object-center opacity-60 z-0 rounded-3xl"
     style={{ pointerEvents: 'none' }}
@@ -127,7 +127,11 @@ const VideoSection = () => {
       </div>
   </div> {/* End relative z-10 text-center space-y-4 py-16 px-4 */}
 </div> {/* End relative mt-20 mb-16 (plans bg wrapper) */}
-<PlanComparisonModal open={showComparison} onClose={() => setShowComparison(false)} />
+<PlanComparisonModal
+        open={showComparison}
+        onClose={() => setShowComparison(false)}
+        onOpenContactForm={() => setIsContactFormOpen(true)}
+      />
 <ContactForm isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
 </section>
   );
