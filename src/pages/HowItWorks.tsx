@@ -33,7 +33,7 @@ const HowItWorks: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-3xl md:text-5xl font-extrabold mb-6">
-                We build outbound like it’s part of <span className="text-blue-600">your GTM</span> – not a side project.
+                Outbound, done right: <span className="text-blue-600">integrated with your GTM</span> — never an afterthought.
               </h1>
               <p className="text-lg text-gray-700 mb-6">Most outbound starts with what’s easy:</p>
               <div className="flex gap-4 mb-6">
@@ -73,30 +73,30 @@ const HowItWorks: React.FC = () => {
         {/* --- Section: We reverse-engineer it --- */}
         <section className="section py-16 border-t">
           <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">We don’t guess your ICP – <span className="text-blue-600">We reverse-engineer it.</span></h2>
-            <p className="text-lg text-gray-700 mb-2">Before anything goes live, we sit down and ask:</p>
-            <p className="text-base text-gray-600 mb-8">“What do your best customers look like right before they buy?”</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Your ICP, reverse-engineered <span className="text-blue-600">from real customer data</span></h2>
+            <p className="text-lg text-gray-700 mb-2">We start by asking the right questions:</p>
+            <p className="text-base text-gray-600 mb-8">Who are your best-fit customers—and what triggers their decision to buy?</p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
                 <CheckCircle className="h-10 w-10 text-green-500 mb-2" />
-                <h4 className="font-bold mb-1">Who They were?</h4>
+                <h4 className="font-bold mb-1">Who were they?</h4>
                 <p className="text-gray-500 text-sm mb-1">industry, size, titles</p>
                 <span className="text-xs text-gray-400 font-semibold">01</span>
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
                 <CheckCircle className="h-10 w-10 text-yellow-400 mb-2" />
-                <h4 className="font-bold mb-1">What Changed?</h4>
+                <h4 className="font-bold mb-1">What changed?</h4>
                 <p className="text-gray-500 text-sm mb-1">new hire? funding? a switch in their stack?</p>
                 <span className="text-xs text-gray-400 font-semibold">02</span>
               </div>
               <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
                 <CheckCircle className="h-10 w-10 text-red-400 mb-2" />
-                <h4 className="font-bold mb-1">What Pain?</h4>
+                <h4 className="font-bold mb-1">What pain did they have?</h4>
                 <p className="text-gray-500 text-sm mb-1">pain they talked about on that first call</p>
                 <span className="text-xs text-gray-400 font-semibold">03</span>
               </div>
             </div>
-            <div className="text-gray-600 text-base border-t pt-6">Then we build your targeting logic from that — not from a static persona deck. It’s how we know we’re talking to the right people at the right time.</div>
+            <div className="text-gray-600 text-base border-t pt-6">We build targeting logic from real customer journeys, not generic personas. That’s how we connect with the right people, at the right time.</div>
           </div>
         </section>
 
@@ -108,30 +108,30 @@ const HowItWorks: React.FC = () => {
                 <Users className="h-32 w-32 text-blue-400 mx-auto" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">We source data like we’re building your next <span className="text-blue-600">50 closed-wons.</span></h2>
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">We source data like every lead could be your next big win <span className="text-blue-600">— quality over quantity.</span></h2>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">Using relevant directories <span className="font-normal">and our internal scrapers</span></p>
-                      <p className="text-gray-600 text-sm">we pull high-intent accounts based on hiring signals, tech stack, funding, and even recent activity on your site.</p>
+                      <p className="font-semibold">Leverage top data sources <span className="font-normal">and proprietary scrapers</span></p>
+                      <p className="text-gray-600 text-sm">We identify high-intent accounts using hiring signals, tech stack, funding, and even on-site activity.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">Then we cross-check everything against our <span className="font-normal">Proprietary Master Account List</span></p>
-                      <p className="text-gray-600 text-sm">a curated set of companies we’ve manually vetted, cleaned, and tagged across key SaaS verticals (HRTech, FinTech, MarTech, etc.)</p>
+                      <p className="font-semibold">Cross-verified with our <span className="font-normal">Proprietary Master Account List</span></p>
+                      <p className="text-gray-600 text-sm">A curated database of vetted, cleaned, and tagged companies across SaaS verticals.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">And yes <span className="font-normal">— every contact is manually reviewed by our GTM team before anything is sent.</span></p>
+                      <p className="font-semibold">Every contact is manually reviewed by our GTM experts before outreach.</p>
                     </div>
                   </li>
                 </ul>
-                <div className="text-gray-600 text-base border-t pt-6 mt-6">You’re not blasting some stale Apollo list. You’re reaching real people at the right companies, when it matters.</div>
+                <div className="text-gray-600 text-base border-t pt-6 mt-6">No more stale lists. You reach real people at the right companies, at the right moment.</div>
               </div>
             </div>
           </div>
@@ -140,29 +140,29 @@ const HowItWorks: React.FC = () => {
         {/* --- Section: We personalize messages --- */}
         <section className="section py-16 border-t">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-4">We personalize messages <span className="text-blue-600">with real context</span></h2>
-            <p className="text-lg text-gray-700 mb-10">If your email could go to anyone, it won’t work. We write campaigns based on logic trees, not placeholders:</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Personalized messaging <span className="text-blue-600">rooted in real buyer context</span></h2>
+            <p className="text-lg text-gray-700 mb-10">Forget generic emails. Our campaigns are tailored with logic trees, not placeholders:</p>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="bg-gradient-to-br from-yellow-100 to-yellow-300 rounded-2xl p-6 flex flex-col items-center">
                 <Rocket className="h-14 w-14 text-yellow-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">If a prospect’s company just raised</p>
-                <h4 className="font-bold text-center">We talk scale, not savings</h4>
+                <p className="text-gray-700 text-center mb-2">If a company just raised a round</p>
+                <h4 className="font-bold text-center">We focus on scale—not cost-cutting</h4>
               </div>
               <div className="bg-gradient-to-br from-red-100 to-red-300 rounded-2xl p-6 flex flex-col items-center">
                 <RefreshCcw className="h-14 w-14 text-red-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">If they just hired their first RevOps</p>
-                <h4 className="font-bold text-center">We hook into process complexity</h4>
+                <p className="text-gray-700 text-center mb-2">If they hired their first RevOps</p>
+                <h4 className="font-bold text-center">We address process complexity</h4>
               </div>
               <div className="bg-gradient-to-br from-purple-100 to-purple-300 rounded-2xl p-6 flex flex-col items-center">
                 <ShieldCheck className="h-14 w-14 text-purple-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">If they’re using a competitor you integrate with</p>
-                <h4 className="font-bold text-center">We position your edge</h4>
+                <p className="text-gray-700 text-center mb-2">If they use a competitor you integrate with</p>
+                <h4 className="font-bold text-center">We highlight your competitive edge</h4>
               </div>
             </div>
-            <div className="text-gray-600 text-base border-t pt-6">We also track RSS feeds (like store expansion, hiring updates, and product launches), layer in website visit data, and use that to time your outreach around moments that show buyer intent.</div>
+            <div className="text-gray-600 text-base border-t pt-6">We monitor company news, hiring, product launches, and website visits to time your outreach for maximum impact.</div>
             <div className="grid md:grid-cols-2 gap-10 items-center mt-12">
               <div>
-                <h3 className="text-xl font-bold mb-3">The result? Messages that feel like a peer reaching out – <span className="text-blue-600">not another agency shot in the dark.</span></h3>
+                <h3 className="text-xl font-bold mb-3">The result: Your prospects feel a genuine, relevant connection — <span className="text-blue-600">never a generic agency blast.</span></h3>
                 
               </div>
               <div>
@@ -177,25 +177,25 @@ const HowItWorks: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">We build and maintain your outbound infrastructure <span className="text-blue-600">– properly.</span></h2>
-                <p className="text-lg text-gray-700 mb-6">Most outbound dies before it reaches the inbox. We fix that.</p>
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Your outbound infrastructure, built and managed <span className="text-blue-600">the right way.</span></h2>
+                <p className="text-lg text-gray-700 mb-6">Most outbound never even hits the inbox. We make sure yours does.</p>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">We spin up <span className="font-normal">dedicated domains, subdomains, and IPs</span> for each campaign</p>
+                      <p className="font-semibold">We set up <span className="font-normal">dedicated domains, subdomains, and IPs</span> for every campaign</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">We handle <span className="font-normal">warm-up, domain rotation, and inbox health monitoring</span></p>
+                      <p className="font-semibold">We manage <span className="font-normal">warm-up, domain rotation, and inbox health</span></p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">We use <span className="font-normal">dedicated infrastructure for each client, with separate risk profiles</span> per campaign</p>
+                      <p className="font-semibold">Each client gets <span className="font-normal">dedicated infrastructure and risk profiles</span> per campaign</p>
                     </div>
                   </li>
                 </ul>
@@ -207,22 +207,22 @@ const HowItWorks: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-6 mt-12">
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <CheckCircle className="h-8 w-8 text-green-500 mb-2" />
-                <div className="font-semibold">Who Replied?</div>
+                <div className="font-semibold">Who responded?</div>
                 <span className="text-xs text-gray-400 font-semibold">01</span>
               </div>
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <CheckCircle className="h-8 w-8 text-yellow-400 mb-2" />
-                <div className="font-semibold">What They Said?</div>
+                <div className="font-semibold">What did they say?</div>
                 <span className="text-xs text-gray-400 font-semibold">02</span>
               </div>
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <CheckCircle className="h-8 w-8 text-purple-400 mb-2" />
-                <div className="font-semibold">Whether It Booked?</div>
+                <div className="font-semibold">Did it book a meeting?</div>
                 <span className="text-xs text-gray-400 font-semibold">03</span>
               </div>
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <CheckCircle className="h-8 w-8 text-red-400 mb-2" />
-                <div className="font-semibold">If it Moved to Pipeline?</div>
+                <div className="font-semibold">Did it move to pipeline?</div>
                 <span className="text-xs text-gray-400 font-semibold">04</span>
               </div>
             </div>
@@ -237,28 +237,28 @@ const HowItWorks: React.FC = () => {
                 <Repeat className="h-32 w-32 text-blue-400 mx-auto" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">We automate where it makes sense. <span className="text-blue-600">We keep it human where it doesn’t.</span></h2>
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Smart automation <span className="text-blue-600">— human where it counts.</span></h2>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">Someone visited your pricing page <span className="font-normal">they get a 1:1-style message 48 hours later</span></p>
+                      <p className="font-semibold">Pricing page visit? <span className="font-normal">We send a 1:1-style message 48 hours later.</span></p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">Your blog RSS feed updates with a new launch <span className="font-normal">we trigger an outbound sequence tailored to that theme</span></p>
+                      <p className="font-semibold">New blog launch? <span className="font-normal">We trigger a tailored outbound sequence.</span></p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">A decision-maker changes jobs <span className="font-normal">we run a win-back or referral play</span></p>
+                      <p className="font-semibold">Decision-maker changes jobs? <span className="font-normal">We run a win-back or referral play.</span></p>
                     </div>
                   </li>
                 </ul>
-                <div className="text-gray-600 text-base border-t pt-6 mt-6">All of this is powered by Make.com, Smartlead, Airtable automations, LinkedIn workflows, and clean webhook logic. But when it comes to writing messages, qualifying data, and handoffs? That stays human. Every time.</div>
+                <div className="text-gray-600 text-base border-t pt-6 mt-6">We automate with Make.com, Smartlead, Airtable, and LinkedIn workflows. But messaging, data review, and handoffs? Always human.</div>
               </div>
             </div>
           </div>
@@ -267,27 +267,27 @@ const HowItWorks: React.FC = () => {
         {/* --- Section: We book meetings --- */}
         <section className="section py-16 border-t bg-gray-50">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-center">We book meetings that show up and <span className="text-blue-600">that sales is happy to take.</span></h2>
-            <p className="text-lg text-gray-700 mb-10 text-center">No shady back-and-forths. No “kind of interested” replies.</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-center">We book meetings that actually happen <span className="text-blue-600">— and your sales team wants.</span></h2>
+            <p className="text-lg text-gray-700 mb-10 text-center">No endless emails. No lukewarm leads.</p>
             <div className="grid md:grid-cols-4 gap-8 mb-8">
               <div className="bg-gradient-to-br from-yellow-100 to-yellow-300 rounded-2xl p-6 flex flex-col items-center">
                 <ClipboardCheck className="h-14 w-14 text-yellow-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">Every meeting is BANT-qualified or tightly ICP matched</p>
+                <p className="text-gray-700 text-center mb-2">Every meeting is BANT-qualified or tightly matched to your ICP</p>
               </div>
               <div className="bg-gradient-to-br from-red-100 to-red-300 rounded-2xl p-6 flex flex-col items-center">
                 <CalendarCheck className="h-14 w-14 text-red-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">Our QA team manually checks each calendar slot</p>
+                <p className="text-gray-700 text-center mb-2">Our QA team reviews every calendar slot</p>
               </div>
               <div className="bg-gradient-to-br from-purple-100 to-purple-300 rounded-2xl p-6 flex flex-col items-center">
                 <Ban className="h-14 w-14 text-purple-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">If it’s a no-show or the fit is wrong, we replace it — no hassle</p>
+                <p className="text-gray-700 text-center mb-2">No-shows or bad fits? We replace them — hassle-free.</p>
               </div>
               <div className="bg-gradient-to-br from-green-100 to-green-300 rounded-2xl p-6 flex flex-col items-center">
                 <Info className="h-14 w-14 text-green-400 mb-3" />
-                <p className="text-gray-700 text-center mb-2">And we send your sales team a full context pack before each call</p>
+                <p className="text-gray-700 text-center mb-2">Your sales team gets a full context pack before every call.</p>
               </div>
             </div>
-            <div className="text-gray-600 text-base border-t pt-6 text-center">We’re not here to book meetings for the sake of numbers — we’re here to build your pipeline.</div>
+            <div className="text-gray-600 text-base border-t pt-6 text-center">We don’t book meetings for vanity metrics — we build real pipeline.</div>
           </div>
         </section>
 
@@ -296,13 +296,13 @@ const HowItWorks: React.FC = () => {
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">We iterate weekly, because outbound <span className="text-blue-600">isn’t set-and-forget.</span></h2>
-                <p className="text-lg text-gray-700 mb-6">We meet with you (or your GTM lead) every week and go over:</p>
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">Weekly iteration — because outbound <span className="text-blue-600">is never set-and-forget.</span></h2>
+                <p className="text-lg text-gray-700 mb-6">We meet weekly to review:</p>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">Response rates (positive vs. neutral vs. objection)</p>
+                      <p className="font-semibold">Response rates (positive, neutral, objections)</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -314,13 +314,13 @@ const HowItWorks: React.FC = () => {
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">What sequences are working and why</p>
+                      <p className="font-semibold">What sequences work — and why</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-blue-600 mt-2"><i className="ri-arrow-right-up-line" /></span>
                     <div>
-                      <p className="font-semibold">What we’re testing next</p>
+                      <p className="font-semibold">What’s on deck for testing</p>
                     </div>
                   </li>
                 </ul>
@@ -332,20 +332,20 @@ const HowItWorks: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <TestTube2 className="h-8 w-8 text-blue-400 mb-2" />
-                <h3 className="font-bold">Test: <span className="text-blue-600">What to test</span></h3>
-                <p className="text-xs text-gray-500">Industry, company size, roles/titles, regions, and buying signals.</p>
+                <h3 className="font-bold">Test: <span className="text-blue-600">What to Experiment With</span></h3>
+                <p className="text-xs text-gray-500">Industry, company size, roles, regions, buying signals.</p>
                 <span className="text-xs text-gray-400 font-semibold">01</span>
               </div>
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <Ship className="h-8 w-8 text-blue-400 mb-2" />
-                <h3 className="font-bold">Ship: <span className="text-blue-600">When to ship</span></h3>
-                <p className="text-xs text-gray-500">Trigger events like new hires, funding, tech stack changes, or office expansions.</p>
+                <h3 className="font-bold">Ship: <span className="text-blue-600">When to Launch</span></h3>
+                <p className="text-xs text-gray-500">Trigger events: new hires, funding, stack changes, expansions.</p>
                 <span className="text-xs text-gray-400 font-semibold">02</span>
               </div>
               <div className="flex flex-col items-center bg-white rounded-xl shadow p-4">
                 <RefreshCcw className="h-8 w-8 text-blue-400 mb-2" />
-                <h3 className="font-bold">Iterate: <span className="text-blue-600">What to improve</span></h3>
-                <p className="text-xs text-gray-500">Messaging angles, objections heard, and pain points shared in sales calls.</p>
+                <h3 className="font-bold">Iterate: <span className="text-blue-600">How to Improve</span></h3>
+                <p className="text-xs text-gray-500">Messaging, objections, and pain points from sales calls.</p>
                 <span className="text-xs text-gray-400 font-semibold">03</span>
               </div>
             </div>
@@ -360,7 +360,7 @@ const HowItWorks: React.FC = () => {
                 <Star className="h-32 w-32 text-yellow-400 mx-auto" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">What You’ll Get</h2>
+                <h2 className="text-2xl md:text-3xl font-extrabold mb-4">What You Get</h2>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
@@ -368,19 +368,19 @@ const HowItWorks: React.FC = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Verified, intent-based lead lists</span>
+                    <span>Verified, intent-driven lead lists</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Personalized campaign copy and logic trees</span>
+                    <span>Personalized campaign copy and logic flows</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Full infrastructure setup and ongoing management</span>
+                    <span>Complete infrastructure setup and management</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Weekly reporting and optimization</span>
+                    <span>Weekly reporting & optimization</span>
                   </li>
                 </ul>
               </div>
@@ -388,7 +388,7 @@ const HowItWorks: React.FC = () => {
           </div>
         </section>
         <section className="text-center text-gray-400 text-sm pt-12">
-          <p>For a full walkthrough, contact us or request a demo.</p>
+          <p>Want a full walkthrough? Contact us or request a demo.</p>
         </section>
       </div>
     </div>
