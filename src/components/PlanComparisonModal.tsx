@@ -72,22 +72,22 @@ const PlanComparisonModal: React.FC<PlanComparisonModalProps> = ({ open, onClose
   if (!open) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-      <div className="bg-white rounded-3xl shadow-2xl max-w-5xl w-full mx-4 relative animate-fadeIn">
+      <div className="bg-white rounded-none md:rounded-3xl shadow-2xl max-w-5xl w-full h-full md:h-auto mx-0 md:mx-4 relative animate-fadeIn flex flex-col">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-2xl font-bold focus:outline-none"
+          className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-500 hover:text-gray-900 text-3xl md:text-2xl font-bold focus:outline-none p-3 md:p-2 bg-gray-100 md:bg-transparent rounded-full z-10"
           aria-label="Close"
         >
           ×
         </button>
-        <div className="px-8 pt-10 pb-8">
-          <h2 className="text-3xl font-extrabold text-center mb-2 text-gray-900">Compare Plans</h2>
-          <p className="text-center text-gray-500 mb-10 text-lg">Find the best fit for your team. No hidden fees. Only pay for verified contacts.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="px-3 pt-16 pb-4 md:px-8 md:pt-10 md:pb-8 overflow-y-auto flex-1">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-2 text-gray-900">Compare Plans</h2>
+          <p className="text-center text-gray-500 mb-6 md:mb-10 text-base md:text-lg">Find the best fit for your team. No hidden fees. Only pay for verified contacts.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8">
             {plans.map((plan, idx) => (
               <div
                 key={plan.tag}
-                className={`relative bg-white rounded-2xl border-2 border-gray-200 shadow-md p-8 flex flex-col items-center transition-all duration-300 ${
+                className={`relative bg-white rounded-none md:rounded-2xl border-2 border-gray-200 shadow-md p-2 md:p-8 flex flex-col items-center transition-all duration-300 ${
                   idx === 1 ? 'scale-105 z-10 border-blue-400 shadow-xl' : ''
                 }`}
               >

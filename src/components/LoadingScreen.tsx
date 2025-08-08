@@ -40,14 +40,20 @@ const LoadingScreen: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
       className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-b from-blue-900 to-black transition-opacity duration-700 ${hide ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       style={{ minHeight: '100vh' }}
     >
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
-        <TypewriterText text="Leads N Links" />
-      </h1>
-      {/* Animated white line under text */}
-      <div className="relative w-full flex justify-center h-8 mb-2">
-  <div className={`h-1 bg-white rounded-full transition-all duration-700 ease-in-out origin-center ${expandLine ? 'w-[320px] md:w-[420px] lg:w-[540px] scale-x-100' : 'w-0 scale-x-0'}`}></div>
-</div>
-      <p className="text-lg text-blue-200 font-medium animate-pulse mt-6">Loading your B2B growth engine...</p>
+      {/* Center Glow Effect */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+        <div className="w-72 h-72 md:w-[28rem] md:h-[28rem] rounded-full bg-blue-500 opacity-40 blur-3xl" style={{background: 'radial-gradient(circle, #3b82f6 0%, #1e3a8a 60%, transparent 100%)'}} />
+      </div>
+      <div className="relative z-10 flex flex-col items-center">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4">
+          <TypewriterText text="Leads N Links" />
+        </h1>
+        {/* Animated white line under text */}
+        <div className="relative w-full flex justify-center h-8 mb-2">
+          <div className={`h-1 bg-white rounded-full transition-all duration-700 ease-in-out origin-center ${expandLine ? 'w-[320px] md:w-[420px] lg:w-[540px] scale-x-100' : 'w-0 scale-x-0'}`}></div>
+        </div>
+        <p className="text-lg text-blue-200 font-medium animate-pulse mt-6">Loading your B2B growth engine...</p>
+      </div>
     </div>
   );
 };

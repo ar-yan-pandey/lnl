@@ -30,11 +30,11 @@ const Header = () => {
       >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center -ml-12 md:hidden">
+          <div className="flex items-center pl-0 md:hidden">
             <img
               src={isScrolled ? "/images/logo-bg-rm.png" : "/images/logo-white.png"}
               alt="Logo"
-              className="h-10 w-auto transition-all duration-300"
+              className="h-20 w-auto transition-all duration-300"
             />
           </div>
           
@@ -42,7 +42,13 @@ const Header = () => {
             {["Home", "Features", "How It Works", "Plans", "Results"].map((item) => (
   <a
     key={item}
-    href={item === "Plans" ? "/revenue-accelerator" : (item === "Home" ? "/#hero" : `/#${item.replace(/ /g, "-").toLowerCase()}`)}
+    href={item === "Plans"
+      ? "/revenue-accelerator"
+      : item === "How It Works"
+      ? "/how-it-works"
+      : item === "Home"
+      ? "/#hero"
+      : `/#${item.replace(/ /g, "-").toLowerCase()}`}
     className={`transition-colors duration-300 px-2 py-1 rounded-md ${
       isScrolled ? "text-gray-900 hover:text-blue-600" : "text-white hover:text-blue-200"
     }`}
@@ -79,7 +85,7 @@ const Header = () => {
             <img
               src={"/images/logo-bg-rm.png"}
               alt="Logo"
-              className="h-10 w-auto absolute top-8 left-8"
+              className="h-20 w-auto absolute top-6 left-6"
             />
             <button
               className="absolute top-7 right-7 p-2 rounded-full focus:outline-none bg-gray-100 hover:bg-gray-200"
