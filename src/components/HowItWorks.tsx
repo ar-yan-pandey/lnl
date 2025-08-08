@@ -38,29 +38,25 @@ const HowItWorks = () => {
   const steps = [
     {
       icon: Search,
-      step: "01",
       title: "Discover & Verify",
       description: "Our AI scans 200M+ profiles to find your ideal prospects and verifies contact information in real-time.",
       highlight: "95% accuracy guarantee"
     },
     {
       icon: MessageSquare,
-      step: "02", 
       title: "Personalized Outreach",
       description: "Multi-channel campaigns with AI-generated personalized messages across email, LinkedIn, and phone.",
       highlight: "3x higher open rates"
     },
     {
       icon: Calendar,
-      step: "03",
       title: "Smart Scheduling",
       description: "Automated follow-ups and intelligent scheduling that books qualified meetings directly into your calendar.",
       highlight: "67% booking rate"
     },
     {
       icon: Trophy,
-      step: "04",
-      title: "Convert & Scale",
+      title: "Win More Deals",
       description: "Track performance, optimize campaigns, and scale successful strategies across your entire sales team.",
       highlight: "Average 340% ROI"
     }
@@ -130,16 +126,7 @@ const HowItWorks = () => {
                     isDark ? 'bg-white' : 'bg-blue-300'
                   }`}></div>
                   
-                  {/* Step number */}
-                  <div className={`absolute -top-4 left-8 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-500 shadow-lg ${
-                    visibleSteps.includes(index)
-                      ? isDark 
-                        ? 'bg-white text-blue-600 scale-100'
-                        : 'bg-gradient-to-r from-blue-600 to-blue-400 text-white scale-100'
-                      : 'bg-gray-300 text-gray-600 scale-90'
-                  }`}>
-                    {step.step}
-                  </div>
+
                   
                   <div className="relative z-10 space-y-6">
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg ${

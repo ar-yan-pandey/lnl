@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex items-center -ml-12">
           </div>
           
-          <nav className="hidden md:flex items-center gap-x-10 font-bold transition-colors duration-300 text-lg">
+          <nav className="hidden md:flex items-center gap-x-10 transition-colors duration-300 text-lg tracking-wide uppercase">
             {["Home", "Features", "How It Works", "Plans", "Resources", "Results"].map((item) => (
   <a
     key={item}
@@ -71,7 +71,7 @@ const Header = () => {
   <a
     key={item}
     href={item === "Plans" ? "/revenue-accelerator" : (item === "Home" ? "/#hero" : `/#${item.replace(/ /g, "-").toLowerCase()}`)}
-    className="text-2xl text-gray-900 font-semibold hover:text-blue-600 transition-colors"
+    className="text-2xl text-gray-900 tracking-wide uppercase hover:text-blue-600 transition-colors"
     onClick={() => setIsMenuOpen(false)}
   >
     {item}

@@ -19,20 +19,13 @@ const Hero = () => {
       backgroundSize: '32px 32px',
     }}
   />
-        {/* Background image right, gradient blend left */}
-        <div className="absolute inset-0 w-full h-full flex">
-          <div className="w-1/2 h-full bg-black"></div>
-          <div className="w-1/2 h-full relative">
-            <img 
-              src="/images/bg.png" 
-              alt="Background" 
-              className="object-cover w-full h-full"
-              style={{objectPosition: 'right center'}}
-            />
-            {/* Gradient overlay for blend */}
-            <div className="absolute inset-0 bg-gradient-to-l from-black/0 via-black/60 to-black"></div>
-          </div>
-        </div>
+  {/* Hero background image */}
+  <img
+    src="/images/hero-bg.png"
+    alt="Hero Background"
+    className="absolute inset-0 w-full h-full object-cover object-center z-0"
+    style={{opacity: 1}}
+  />
         <div className="relative z-10 flex-1 flex items-center justify-start">
           <div className="max-w-3xl w-full px-4 sm:px-8 py-24 text-left mr-auto">
             {/* Background decorative elements */}

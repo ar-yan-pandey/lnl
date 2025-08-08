@@ -43,14 +43,27 @@ export default function RevenueAccelerator() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-900 to-black text-white py-16 px-4 text-center">
-        <h5 className="text-xl font-semibold mb-2">Less Pitching. More Deals.</h5>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Accelerate Your Pipeline & Revenue</h1>
-        <p className="max-w-2xl mx-auto text-lg opacity-90 mb-6">
-          We design personalized outbound campaigns, equip you with the right tech stack to track every metric, and deliver booked meetings with buyers ready to talk.
-        </p>
-        <Link to="/contact-us" className="inline-block bg-white text-blue-900 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-blue-100 transition">Contact Us</Link>
-      </section>
+      <section className="relative w-full min-h-screen flex items-center justify-start bg-black overflow-hidden">
+  <img
+    src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+    alt="Professional business person"
+    className="absolute inset-0 w-full h-full object-cover object-center opacity-70"
+    style={{zIndex: 1}}
+  />
+  <div className="absolute inset-0" style={{
+  background: 'linear-gradient(120deg, #0a224e 70%, #1e3a8a 100%)',
+  opacity: 0.85,
+  zIndex: 2
+}}></div>
+  <div className="relative z-10 max-w-2xl ml-8 md:ml-24 text-left">
+    <h5 className="text-lg md:text-xl font-semibold mb-2 text-white">Less Pitching. More Closing.</h5>
+    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-white">More Leads. More Appointments. More Revenue.</h1>
+    <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
+      We create customized outbound sales campaigns, set you up with the right technology to analyze campaign performance, and deliver booked meetings with qualified buyers.
+    </p>
+    <Link to="/contact-us" className="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-full shadow-lg hover:bg-blue-700 transition">Contact Us</Link>
+  </div>
+</section>
 
       {/* Why Choose Section */}
       <section className="max-w-6xl mx-auto py-16 px-4">
