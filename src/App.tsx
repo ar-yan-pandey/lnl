@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import LoadingScreen from './components/LoadingScreen';
 import Header from './components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -16,6 +18,11 @@ function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2200);
+    AOS.init({
+      duration: 700,
+      once: true,
+      easing: 'ease-out-cubic',
+    });
     return () => clearTimeout(timer);
   }, []);
 
