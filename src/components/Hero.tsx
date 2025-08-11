@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="pt-16 relative overflow-hidden min-h-[560px] flex items-stretch">
+      <section id="hero" className="pt-16 relative overflow-hidden min-h-[560px] flex items-stretch">
   {/* Minimal plus pattern background */}
   <div
     className="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0"
@@ -25,6 +25,13 @@ const Hero = () => {
     alt="Hero Background"
     className="absolute inset-0 w-full h-full object-cover object-center z-0"
     style={{opacity: 1}}
+  />
+  {/* Dark blue gradient overlay from left to half */}
+  <div 
+    className="absolute inset-0 z-5 pointer-events-none"
+    style={{
+      background: 'linear-gradient(to right, rgba(30, 58, 138, 0.8) 0%, rgba(30, 58, 138, 0.6) 20%, rgba(30, 58, 138, 0.4) 35%, rgba(30, 58, 138, 0.2) 45%, rgba(30, 58, 138, 0.1) 55%, transparent 70%)'
+    }}
   />
         <div className="relative z-10 flex-1 flex items-center justify-start">
           <div className="max-w-3xl w-full px-4 sm:px-8 py-24 text-left mr-auto">
