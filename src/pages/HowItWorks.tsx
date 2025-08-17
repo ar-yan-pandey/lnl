@@ -33,38 +33,38 @@ const HowItWorks: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-3xl md:text-5xl font-extrabold mb-6">
-                Outbound, done right: <span className="text-blue-600">integrated with your GTM</span> — never an afterthought.
+                Outbound, perfected: <span className="text-blue-600">seamlessly woven into your GTM</span> — never an afterthought.
               </h1>
-              <p className="text-lg text-gray-700 mb-6">Most outbound starts with what’s easy:</p>
+              <p className="text-lg text-gray-700 mb-6">Most teams begin with the basics:</p>
               <div className="flex gap-4 mb-6">
                 <div className="flex flex-col items-center">
                   <ClipboardCheck className="h-12 w-12 text-blue-500 mb-2" />
-                  <span className="text-sm">Buy a list</span>
+                  <span className="text-sm">Purchase a contact list</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <Loader2 className="h-12 w-12 text-green-500 mb-2" />
-                  <span className="text-sm">Load a sequence</span>
+                  <span className="text-sm">Upload a generic sequence</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <ClipboardCheck className="h-12 w-12 text-yellow-500 mb-2" />
-                  <span className="text-sm">Copy-paste “Just circling back.”</span>
+                  <span className="text-sm">Send the same “Just checking in” message</span>
                 </div>
               </div>
             </div>
             <div className="bg-gray-50 rounded-2xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Problem with most of the outbounds:</h3>
+              <h3 className="text-lg font-semibold mb-4">The result?</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <XCircle className="h-8 w-8 text-red-500" />
-                  <span>Feels productive</span>
+                  <span>Activity that feels productive</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <XCircle className="h-8 w-8 text-red-500" />
-                  <span>Looks busy</span>
+                  <span>Effort that looks impressive</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <XCircle className="h-8 w-8 text-red-500" />
-                  <span>Books nothing</span>
+                  <span>But few actual meetings booked</span>
                 </div>
               </div>
             </div>
@@ -73,9 +73,9 @@ const HowItWorks: React.FC = () => {
         {/* --- Section: We reverse-engineer it --- */}
         <section className="section py-16 border-t">
           <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Your ICP, reverse-engineered <span className="text-blue-600">from real customer data</span></h2>
-            <p className="text-lg text-gray-700 mb-2">We start by asking the right questions:</p>
-            <p className="text-base text-gray-600 mb-8">Who are your best-fit customers—and what triggers their decision to buy?</p>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Your ideal customer profile, decoded <span className="text-blue-600">using real data</span></h2>
+            <p className="text-lg text-gray-700 mb-2">We begin by asking the questions that matter:</p>
+            <p className="text-base text-gray-600 mb-8">Who are your top-converting customers, and what sparks their buying decisions?</p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
                 <CheckCircle className="h-10 w-10 text-green-500 mb-2" />
@@ -364,23 +364,23 @@ const HowItWorks: React.FC = () => {
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Custom outbound plan tailored to your ICP</span>
+                    <span>A bespoke outbound strategy designed for your ideal customer</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Verified, intent-driven lead lists</span>
+                    <span>Hand-verified, high-intent lead lists</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Personalized campaign copy and logic flows</span>
+                    <span>Tailored messaging and campaign flows</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Complete infrastructure setup and management</span>
+                    <span>Full setup and ongoing management of your outbound systems</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="h-6 w-6 text-green-500" />
-                    <span>Weekly reporting & optimization</span>
+                    <span>Weekly insights and continuous improvement</span>
                   </li>
                 </ul>
               </div>
@@ -388,7 +388,7 @@ const HowItWorks: React.FC = () => {
           </div>
         </section>
         <section className="text-center text-gray-400 text-sm pt-12">
-          <p>Want a full walkthrough? Contact us or request a demo.</p>
+          <p>Curious to see it in action? Reach out for a personalized walkthrough or request a demo.</p>
         </section>
       </div>
     </div>
